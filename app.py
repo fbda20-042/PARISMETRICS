@@ -11,7 +11,7 @@ server = Flask(__name__)
 
 # Initialize Dash app
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/', external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+server = app.server
 # Function to read and analyze web server log data
 def analyze_logs():
     # Read web server log data from CSV file
